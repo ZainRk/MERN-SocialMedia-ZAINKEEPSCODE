@@ -6,8 +6,8 @@
     display: flex;
     flex-direction: column;
     font-size: 13px;
+    max-height: 10rem;
 }
-
 .follower{
     display: flex;
     justify-content: space-between;
