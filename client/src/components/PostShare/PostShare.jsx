@@ -14,6 +14,8 @@ const PostShare = () => {
   const loading = useSelector((state) => state.postReducer.uploading);
   const [image, setImage] = useState(null);
   const desc = useRef();
+  const title = useRef();
+  const skillsRequired = useRef();
   const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
 
   // handle Image Change
@@ -33,7 +35,9 @@ const PostShare = () => {
     //post data
     const newPost = {
       userId: user._id,
+      title:title.current.value,
       desc: desc.current.value,
+      skillsRequired : skillsRequired.current.value,
     };
 
     // if there is an image with post
@@ -57,7 +61,9 @@ const PostShare = () => {
   // Reset Post Share
   const resetShare = () => {
     setImage(null);
+    title.current.value = "";
     desc.current.value = "";
+    skillsRequired.current.value = "";
   };
   return (
     <div className="PostShare">
@@ -70,11 +76,23 @@ const PostShare = () => {
         alt="Profile"
       />
       <div>
+      <input
+          type="text"
+          placeholder="Project Title"
+          required
+          ref={title}
+        />
         <input
           type="text"
           placeholder="Project Title and description"
           required
           ref={desc}
+        />
+        <input
+          type="text"
+          placeholder="Skills required for the project"
+          required
+          ref={skillsRequired}
         />
         <div className="postOptions">
           

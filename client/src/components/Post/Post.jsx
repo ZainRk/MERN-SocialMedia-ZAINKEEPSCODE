@@ -32,9 +32,10 @@ const Post = ({ data }) => {
       </span> */}
       <div className="detail">
         <span>
-          <b>{data.name} </b>
-        </span>
-        <span>{data.desc}</span>
+          <b>Title: {data.title} </b>
+        </span><br/>
+        <span>Description: {data.desc}</span><br/>
+        <span>Skiils Required: {data.skillsRequired}</span>
       </div>
 
       <div className="postReact">
