@@ -25,25 +25,36 @@ const Post = ({ data }) => {
         alt=""
       />
 
-      <div className="postReact">
-        <img
-          src={liked ? Heart : NotLike}
-          alt=""
-          style={{ cursor: "pointer" }}
-          onClick={handleLike}
-        />
-        <img src={Comment} alt="" />
-        <img src={Share} alt="" />
-      </div>
+      
 
-      <span style={{ color: "var(--gray)", fontSize: "12px" }}>
+      {/* <span style={{ color: "var(--gray)", fontSize: "12px" }}>
         {likes} likes
-      </span>
+      </span> */}
       <div className="detail">
         <span>
           <b>{data.name} </b>
         </span>
         <span>{data.desc}</span>
+      </div>
+
+      <div className="postReact">
+        <input
+          type="text-area"
+          placeholder="Cover Letter"
+          required
+        />
+
+        {/* <img
+          src={liked ? Heart : NotLike}
+          alt=""
+          style={{ cursor: "pointer" }}
+          onClick={handleLike}
+        /> */}
+        {/* <img src={Comment} alt="" /> */}
+        {/* <img src={Share} alt="" /> */}
+        <button className="button a-button">
+        Apply
+      </button>
       </div>
     </div>
   );

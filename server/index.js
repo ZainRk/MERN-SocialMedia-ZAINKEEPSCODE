@@ -29,6 +29,7 @@ dotenv.config();
 const PORT = process.env.PORT;
 
 const CONNECTION =process.env.MONGODB_CONNECTION;
+mongoose.set("strictQuery", false);
 mongoose
   .connect(CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Listening at Port ${PORT}`)))

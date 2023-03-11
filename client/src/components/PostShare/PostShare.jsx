@@ -72,21 +72,22 @@ const PostShare = () => {
       <div>
         <input
           type="text"
-          placeholder="What's happening?"
+          placeholder="Project Title and description"
           required
           ref={desc}
         />
         <div className="postOptions">
-          <div
+          
+          {/* <div
             className="option"
             style={{ color: "var(--photo)" }}
             onClick={() => imageRef.current.click()}
           >
             <UilScenery />
             Photo
-          </div>
+          </div> */}
 
-          <div className="option" style={{ color: "var(--video)" }}>
+          {/* <div className="option" style={{ color: "var(--video)" }}>
             <UilPlayCircle />
             Video
           </div>
@@ -97,13 +98,14 @@ const PostShare = () => {
           <div className="option" style={{ color: "var(--shedule)" }}>
             <UilSchedule />
             Shedule
-          </div>
+          </div> */}
+
           <button
             className="button ps-button"
             onClick={handleUpload}
             disabled={loading}
           >
-            {loading ? "uploading" : "Share"}
+            {loading ? "uploading" : "Upload"}
           </button>
 
           <div style={{ display: "none" }}>

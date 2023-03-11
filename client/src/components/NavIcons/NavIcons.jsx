@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 
 const NavIcons = () => {
   return (
-    <div className="navIcons">
+    <div className="navIcons" style={{display:"flex",justifyContent:"space-around"}}>
       <Link to="../home">
         <img src={Home} alt="" />
       </Link>
-      <UilSetting />
-      <img src={Noti} alt="" />
+      {/* <UilSetting /> */}
+      {/* <img src={Noti} alt="" /> */}
       <Link to="../chat">
         <img src={Comment} alt="" />
       </Link>

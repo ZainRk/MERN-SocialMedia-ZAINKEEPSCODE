@@ -13,7 +13,7 @@ const RightSide = () => {
 
       <NavIcons />
       {/* TrendCard */}
-      <TrendCard />
+      {/* <TrendCard /> */}
 
       {/* Share buttong */}
       <button className="button r-button" onClick={() => setModalOpened(true)}>

@@ -20,3 +20,19 @@
     align-items: flex-start;
     gap: 1.5rem;
 }
+
+.postReact>input{
+    width: 70%;
+    height: 6rem;
+    background-color: var(--inputColor);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+.a-button{
+    height:3rem;
+    max-width: 50px;
+    align-self: center;
+}
